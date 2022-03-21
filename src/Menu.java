@@ -2,10 +2,11 @@ import java.util.Scanner;
 
 public class Menu {
 
-    public void Run() {
+    public void run() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите 1 для запуска программы или 2 для выключения");
+
         do {
             int i = scanner.nextInt();
             switch (i){
@@ -19,6 +20,7 @@ public class Menu {
             }break;
         }
         while(true);
+
     }
 }
 
