@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args){
         Menu menu = new Menu();
         menu.run();
-        Scanner scanner = new Scanner(System.in);
+/*        Scanner scanner = new Scanner(System.in);
 
         while (true) {
             if (scanner.hasNextInt()) {
@@ -14,7 +14,7 @@ public class Main {
                 System.out.println("Вы ввели неправильный тип значений");
             }
             scanner.nextLine();
-        }
+        }*/
 
     }
 
