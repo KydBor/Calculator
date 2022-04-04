@@ -1,12 +1,40 @@
 public class User {
+    private String name;
     private String login;
     private String password;
-    private String username;
+    private double[] values = new double[1000];
+    private int countValues = 0;
 
-    public User(String login, String password, String username) {
+    public void setValue(double value) {
+        if (countValues < values.length) {
+            values[countValues] = value;
+            countValues++;
+        } else {
+            countValues = 0;
+            setValue(value);
+        }
+    }
+
+    public void printValues() {
+        for (Double value : values) {
+            if (value != 0) {
+                System.out.println(value);
+            }
+        }
+    }
+
+    public User(String name, String login, String password) {
+        this.name = name;
         this.login = login;
         this.password = password;
-        this.username = username;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getLogin() {
@@ -23,13 +51,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 }

@@ -1,3 +1,3 @@
 public interface CalculatorInterface {
-    void action (double a, double b, String mathOperation);
+    void operation(User currentUser, double firstNumber, double secondNumber, String operation);
 }
